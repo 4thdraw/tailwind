@@ -8,3 +8,7 @@ body{
 h2{
   font-family: "SF Pro Display";
 }
+.price{
+  font-family: "SF Pro Display";
+  font-weight: 600;
+}
