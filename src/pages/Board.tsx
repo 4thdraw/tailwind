@@ -3,7 +3,8 @@ import Title from "../ui/Title"
 
 export default function Board() {
 
-  const [ action , setAction ] = useState<boolean>(false);
+  const [action, setAction] = useState<number | null>(null);
+
 
   interface BoardItem {
     subject: string;
@@ -44,11 +45,11 @@ export default function Board() {
         <Title  bigtitle="커뮤니티" subtitle="열린 마음으로 고객의 소리를 담습니다." ></Title>
         <ul className="text-white text-[36px] mx-auto w-[1024px] flex flex-col gap-4 mt-20">
           {
-            boardlist.map( (item) => <li className="border-b-2">
+            boardlist.map( (item, idx ) => <li className="border-b-2" key={idx}>
               <h3 className="text-2xl font-bold mb-2" 
-               onClick={ ()=>{ setAction(!action); } } > {item.subject} </h3>
+               onClick={ ()=>{ setAction(action === idx ? null : idx); } } > {item.subject} </h3>
               {
-                action && <p className="text-xl">{item.content}</p>
+                action === idx && <p className="text-xl">{item.content}</p>
               }              
             </li> )
           }
