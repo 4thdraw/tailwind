@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/16/solid";
+
 import Title from "../ui/Title"
 
 export default function Board() {
@@ -45,11 +47,26 @@ export default function Board() {
         <Title  bigtitle="커뮤니티" subtitle="열린 마음으로 고객의 소리를 담습니다." ></Title>
         <ul className="text-white text-[36px] mx-auto w-[1024px] flex flex-col gap-4 mt-20">
           {
-            boardlist.map( (item, idx ) => <li className="border-b-2" key={idx}>
-              <h3 className="text-2xl font-bold mb-2" 
-               onClick={ ()=>{ setAction(action === idx ? null : idx); } } > {item.subject} </h3>
+            boardlist.map( (item, idx ) => <li className={  `${ action !== idx && "border-b-2"} ` } key={idx}>
+              <h3 className={`text-2xl ${ action === idx &&  "font-bold" } mb-2 
+              flex justify-between items-center `} 
+               onClick={ ()=>{ setAction(action === idx ? null : idx); } } > 
+               
+               {item.subject} 
+
+              <div className="flex p-2">
+                {
+                  action === idx ? 
+                  <ChevronUpIcon  className="w-[25px] h-[25px]"></ChevronUpIcon> :
+                  <ChevronDownIcon className="w-[25px] h-[25px]"></ChevronDownIcon>
+                }
+                
+                
+              </div>
+               
+               </h3>
               {
-                action === idx && <p className="text-xl">{item.content}</p>
+                action === idx && <p className="text-xl p-5 bg-gray-800">{item.content}</p>
               }              
             </li> )
           }
