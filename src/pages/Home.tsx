@@ -1,24 +1,63 @@
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-fade';
+
+import mainBanner from '../json/data.json';
+import type { MainBannerJson } from '../types/banner';
+
 
 
 export default function Home() {
+  
+const banners = mainBanner.mainBanner as MainBannerJson['mainBanner'];
+
   return (
-    <div className="w-[1280px] mx-auto border-2 bg-white rounded-[20px] 
-                    mt-[80px] p-[30px] flex justify-between ">
-        <div>
-            <h2 className=" text-[172px] 
-                            uppercase 
-                            font-extrabold 
-                            tracking-[-0.028] 
-                            leading-[1.01]">
-                workout<br />with<br />me</h2>
-            <p className="text-[16px] font-bold uppercase">
-                A huge selection of health and fitness content,<br></br> 
-                healthy recipes and transformation stories <br></br>
-                to help you get fit and stay fit!</p>
-        </div>
-        <div className="w-[0px] flex justify-end pt-[150px]">
-            <img src="/man.png" className="max-w-none"></img>
-        </div>
+    <div className="">
+      <Swiper
+        spaceBetween={0}
+        slidesPerView={1}
+        modules={[Navigation, Pagination, Autoplay, EffectFade]}
+        // effect="fade"
+        // fadeEffect={{ crossFade: true }}
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          type: 'fraction',
+        }}
+        navigation={true}
+        loop={true}
+       
+      >
+      {
+        banners.map((v, i)=> <SwiperSlide 
+        className={`!h-[800px] bg-cover`} style={{ backgroundImage: `url(${v.imgurl})` }} key={i} >
+          <div className="flex justify-center items-center h-full bg-black/30">
+              <div className='flex flex-col gap-[10px] text-white items-center'>
+                <h2 className=" text-[30px] 
+                                uppercase 
+                                font-extrabold 
+                                tracking-[-0.028] 
+                                leading-[1.01]">
+                    {v.title}
+                </h2>
+                <p className="text-[24px] font-bold uppercase">
+                    {v.subtitle}
+                </p>
+              </div>
+          </div>
+        </SwiperSlide> )
+      }
+       
+      </Swiper>
+      
+     
+        
     </div>
   )
 }

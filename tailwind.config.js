@@ -5,7 +5,34 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+       colors :{
+         main : "#ac441e",
+         gray : "#707070",
+         black :"#0A0909"
+       },
+       fontFamily :{
+         kr : ['Noto Sans KR', 'sans-serif'],
+         en : ['Montserrat', 'sans-serif'],
+       },
+       fontSize :{
+         title : '28px',
+         subtitle : '18px',
+         base : '16px',
+         small : '14px',
+         xs : '12px'
+       },
+       fontWeight :{
+          100 : '100',
+          200 : '200',
+          300 : '300',         
+          400 : '400',
+          500 : '500',
+          600 : '600',
+          700 : '700',
+          900 : '900'
+       }
+    },
   },
   plugins: [],
 }

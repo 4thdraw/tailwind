@@ -1,0 +1,24 @@
+{
+    "mainBanner" : [
+        {
+            "imgurl" : "/banner/m_1.jpg",
+            "title" : "겨울 필수템 어그부츠 ~60% OFF",
+            "subtitle" : "A 컬러스 오브 캘리포니아"
+        },
+         {
+            "imgurl" : "/banner/m_2.jpg",
+            "title" : "WINTER MUST HAVES",
+            "subtitle" : "지금 꼭 필요한 윈터 큐레이션 아이템을 만나보세요."
+        },
+         {
+            "imgurl" : "/banner/m_3.jpg",
+            "title" : "겨울 필수템 어그부츠 ~60% OFF",
+            "subtitle" : "A 컬러스 오브 캘리포니아"
+        },
+         {
+            "imgurl" : "/banner/m_4.jpg",
+            "title" : "겨울 필수템 어그부츠 ~60% OFF",
+            "subtitle" : "A 컬러스 오브 캘리포니아"
+        }
+    ]
+}
