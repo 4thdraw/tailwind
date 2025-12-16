@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 
 
 import './index.css'
+import './scss/common.scss'
 
 import Hd from './layout/Hd'
 import Ft from './layout/Ft'

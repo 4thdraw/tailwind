@@ -1,0 +1,52 @@
+#root{
+    //  객체가 없는 경우 -> 동적객체인 경우 요소검사를 통해서 접근처리
+    .swiper-button-prev,
+    .swiper-button-next{
+        width:3rem;
+        height:3rem;
+        border:1px solid white;
+        transform: rotate(-45deg);
+        margin:2rem;
+
+        @media (max-width:1024px) {
+            display: none;
+            
+        }
+
+        svg{
+            display: none;
+        }
+
+    }
+    .swiper-button-next{
+       border-width:0 1px 1px 0;
+    }
+    .swiper-button-prev{
+      border-width:1px 0 0 1px;
+
+    }
+    .swiper-pagination-fraction{
+      
+        background-color: rgba(0, 0, 0, 0.632);
+        width:auto;
+        color:white;
+        font-size: clamp(12px, 3vw, 16px);
+        font-weight: 300;       
+        padding: 5px 20px;
+        border-radius: 30px;
+        text-align: center;
+        bottom: 3rem;
+        left:50%;
+        transform: translateX(-50%);        
+
+    }
+   .swiper-slide{
+        h2{ opacity: 0; transform: translateY(-180%); transition: 0.8s; }
+        p{ opacity: 0;  transform: translateY(100%); transition: 0.8s; }
+
+        &.swiper-slide-active{
+            h2{ opacity: 1; transform: translateY(0%); }
+            p{ opacity: 1;  transform: translateY(0%); }
+        }
+   }
+}

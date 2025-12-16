@@ -6,14 +6,14 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 
-import mainBanner from '../json/data.json';
+import mainData from '../json/data.json';
 import type { MainBannerJson } from '../types/banner';
 
-
+import Productset from '../component/Productset';
 
 export default function Home() {
   
-const banners = mainBanner.mainBanner as MainBannerJson['mainBanner'];
+const banners = mainData.mainBanner as MainBannerJson['mainBanner'];
 
   return (
     <div className="">
@@ -24,7 +24,7 @@ const banners = mainBanner.mainBanner as MainBannerJson['mainBanner'];
         // effect="fade"
         // fadeEffect={{ crossFade: true }}
         autoplay={{
-          delay: 4000,
+          delay: 8000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -55,9 +55,7 @@ const banners = mainBanner.mainBanner as MainBannerJson['mainBanner'];
       }
        
       </Swiper>
-      
-     
-        
+      <Productset></Productset>   
     </div>
   )
 }
