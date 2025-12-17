@@ -20,6 +20,7 @@ export default {
         },
         fontSize :{
           title : '30px',
+          navi : '24px',
           subtitle : '18px',
           base : '16px',
           small : '14px',
