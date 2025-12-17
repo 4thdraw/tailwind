@@ -20,6 +20,8 @@ export interface ProductItem {
   정가: number
   배송: string
   이미지:string
+  노출: boolean
+  등록날짜 : string
 }
 
 export interface MainProductResponse {

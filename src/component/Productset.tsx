@@ -13,7 +13,7 @@ export default function Productset() {
         </h2>
         <ul className='flex gap-[16px] '>
           {
-              products.상품목록.map((v, i)=>{
+              products.상품목록.filter((v)=>v.노출 && v.정가 !== v.판매가).slice(0,6).map((v, i)=>{
                 return(
                   <li key={i} className='flex-1'>
                        <img src={v.이미지}></img>
