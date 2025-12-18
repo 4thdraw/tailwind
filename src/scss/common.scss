@@ -49,4 +49,13 @@
             p{ opacity: 1;  transform: translateY(0%); }
         }
    }
+
+   .popup{
+        .swiper-pagination-fraction{
+            left:unset;
+            transform: none;
+            right:3rem;
+        }
+    }
 }
+
