@@ -1,13 +1,20 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
+
 export default function Ft() {
+
+  const [ plusarrow, setPlusarrow] = useState<boolean>(true);
+
   return (
-    <footer className="ft border-t-2 font-300">
+    <footer className="ft border-t-2 font-300 mt-[100px]">
        <div className="max-w-1550 gap-[60px] w-full mx-auto py-[50px] flex justify-between">
         <div className="logo">
             <img src="/logo.svg" className="w-[150px]"></img>
         </div>
         <div className="flex-1 flex gap-[50px] font-kr leading-[1.8]">
             <div className="flex-1">
-                <h3 className="font-700 text-subtitle mb-5">주식회사 포랩코리아</h3>
+                <h3 className="font-700 text-subtitle mb-3">주식회사 포랩코리아</h3>
                 <div className="">
                   <span className="font-500">대표 : </span> 강동균<br />
                   <span className="font-500">사업자등록번호 : </span> 578-81-03310 <a href="">[사업자정보확인]</a><br />                
@@ -23,7 +30,7 @@ export default function Ft() {
                 </ul>
             </div>
             <div className="flex-1">
-                <h3 className="font-700 text-subtitle mb-5">고객센터</h3>
+                <h3 className="font-700 text-subtitle mb-3">고객센터</h3>
                 <div>
                   <span className="font-500">전화</span> 070-4800-3250 평일 10:00~17:00<br />
                   Break Time - 12:30~13:30 (주말, 공휴일 휴무)<br />
@@ -32,10 +39,61 @@ export default function Ft() {
                 </div>
                 
 
-                <h3 className="font-700 text-subtitle mb-5">BANK INFO</h3>
+                <h3 className="font-700 text-subtitle mb-3 mt-10">BANK INFO</h3>
+                <div>
+                  국민은행<br />
+                  032901-04-366203<br />
+                  예금주 : 주식회사 포랩코리아
+                </div>
             </div>
-            <div className="flex-1 font-en">
-                <h3 className="font-700 text-subtitle mb-5">HELP</h3>
+            <div className="flex-1 font-en flex flex-col">
+                <h3 className="font-700 text-subtitle mb-3">HELP</h3>
+                <div>
+                  <ul>
+                    <li>
+                      <Link to="/store">매장 안내</Link>
+                    </li>
+                    <li>
+                      <Link to="/qna">1:1 문의</Link>
+                    </li>
+                    <li>
+                      <Link to="/partner">입접 / 제휴문의</Link>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="sns family mt-auto flex justify-between">
+                   <div className="snslist flex gap-4 items-end">
+                      <a href="" className="bg-black p-3 rounded-full">
+                        <img src="/instar.svg" className="w-[24px]"></img>
+                      </a>
+                      <a href="" className="bg-black p-3  rounded-full">
+                        <img src="/kakao.png" className="w-[24px]"></img>
+                      </a>
+                   </div>
+                   <div className="familySite relative">
+                      <button className="bg-black flex items-center justify-center gap-5 text-white 
+                      h-[48px] w-[180px] rounded-full font-600" onClick={ () => { setPlusarrow(!plusarrow) } }>
+                        FAMILY SITE
+                        <svg className="family_icon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <line className="icon-line-h" x1="2" y1="6" x2="10" y2="6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></line>
+            { plusarrow  &&   <line className="icon-line-v" x1="6" y1="2" x2="6" y2="10" stroke="currentColor" 
+                              stroke-width="1.5" stroke-linecap="round"></line> }
+                        </svg>
+                      </button>
+                      { !plusarrow  &&   
+                        <div className="familyList border bg-white rounded-[30px] px-4 py-5 
+                          absolute w-full bottom-[50px] start-0 ">
+                            <ul>
+                              <li><a href="">포랩코리아</a></li>
+                              <li><a href="">헌터코리아</a></li>
+                              <li><a href="">포랩</a></li>
+                              <li><a href="">블리퍼스</a></li>
+                            </ul>
+                        </div>
+                      }
+                   </div>
+                </div>
             </div>
         </div>
        </div>

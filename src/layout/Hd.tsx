@@ -1,7 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, use } from 'react';
 import { Link,  useLocation } from 'react-router-dom'
 import { Swiper , SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade } from 'swiper/modules';
+import {  Bars3Icon,   XMarkIcon } from "@heroicons/react/16/solid";
+
 
 import 'swiper/css';
 import 'swiper/css/effect-fade';
@@ -9,6 +11,8 @@ import 'swiper/css/effect-fade';
 export default function Hd() {
 
   const [scrolled, setScrolled] = useState<boolean>(false);
+  const [ allmenu , setAllmenu ] = useState<boolean>(false);
+
   const location = useLocation();
   const isRoot : boolean = location.pathname === "/";
 
@@ -50,13 +54,19 @@ export default function Hd() {
                             </Swiper>                            
                         </div>
                         <div className='flex justify-between align-center px-4 py-[35px]'>
-                          <h1>
-                              <a href="/" className='text-white font-en'>
+                          <h1 className='flex flex-col items-center justify-center'>
+                              <a href="/" className='text-white font-en '>
                                 <img src="/logo.svg" className={`w-[180px]    ${ isRoot ?  scrolled  ?  ""  :  "filter  invert" : "" }` }></img>
                               </a>
                           </h1>
-                          <nav>
-                              <ul className='flex gap-6 '>
+                          <button className='md:hidden w-[36px] text-white' onClick={ () => { setAllmenu(!allmenu) } } >
+                            {
+                              allmenu ? <XMarkIcon></XMarkIcon> : <Bars3Icon></Bars3Icon>
+                            }
+                          </button>
+                          <nav className={` md:block  ${ allmenu ? "" : "hidden" }  md:[position:unset]  absolute top-[100%] 
+                                    w-full bg-black/70 md:bg-transparent start-0 `}>
+                              <ul className={`md:flex gap-6  `}>
                                   <li>
                                       <Link to="/about"  className={` ${  isRoot ? scrolled ? "" : "text-white" : "" }  hover:text-main hover:border-b-2 text-navi font-500`} >회사소개</Link>
                                   </li>
