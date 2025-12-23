@@ -22,15 +22,15 @@ export default function Product() {
   return (
     <section>
       <Title bigtitle="제품소개" subtitle="25년 업체 최초 인증제품을 소개합니다." ></Title>
-       <ul className="grid grid-cols-3 gap-8 w-[1024px] mx-auto mt-40">
+       <ul className="grid  lg:grid-cols-3 gap-[clamp(15px,5vw,30px)] grid-cols-2 max-w-[1024px] w-full  mx-auto mt-[clamp(2.5rem,3.8vw,10rem)]">
             {
               // products.map(()=>())
               // products.map(()=>{ return() })
 
               products.map((v)=>(
-                                <li className="bg-white rounded-[20px] p-4">
+                                <li className="bg-white">
                                     <div>
-                                      <img src={`/product/${v.img}`} ></img>
+                                      <img src={`/product/${v.img}`} className=" rounded-[20px] " ></img>
                                     </div>
                                     <div className="flex justify-between py-4">
                                         <p >{v.name}</p>

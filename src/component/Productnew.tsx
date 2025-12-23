@@ -2,13 +2,15 @@
 import mainData from '../json/data.json';
 import type {  MainProductResponse } from '../types/banner';
 
+import Productinfo from './Productinfo';
+
 
 export default function Productset() {
 
  const products = mainData.mainProduct as MainProductResponse['mainProduct'];
 
   return (
-       <section className='max-w-1550 mx-auto  py-[100px]'>
+       <section className='max-w-1550 mx-auto  py-[100px]  px-5 xl:px-0'>
         <h2 className='text-title font-600 mb-[30px]'>
           { products.섹션명.split("|")[1] }
         </h2>
@@ -21,17 +23,8 @@ export default function Productset() {
               .slice(0, 5).map((v, i)=>{
                // v.등록날짜가 문자열임 "2025-12-10" 신상품 노출조건추가
                   return(
-                    <li key={i} className='border pb-5 px-5'>
-                      <img src={v.이미지}></img>
-                       <div className='flex flex-col gap-[8px]'>
-                         <p>{v.브랜드} {v.등록날짜}</p>
-                         <p className='mb-2'>{v.상품명}</p>
-                         <p className='flex gap-4 items-end'> 
-                            <span className='font-500 text-main'>{Math.round( (1 - v.판매가 / v.정가) * 100)}%</span>
-                            <span>{v.판매가.toLocaleString()}원</span> 
-                            <span>{v.정가.toLocaleString()}원</span>
-                         </p>
-                       </div>
+                    <li key={i} className='flex flex-col'>
+                      <Productinfo v={v}></Productinfo>
                     </li>
                   )  
               })

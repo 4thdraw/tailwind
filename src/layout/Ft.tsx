@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 
 export default function Ft() {
@@ -8,8 +8,11 @@ export default function Ft() {
   const [ helpopen, setHelpopen ] = useState<boolean>(true);
   const [ comopen, setComopen ] = useState<boolean>(true); 
 
+  const location = useLocation(); //주소창분석
+  const isAbout : boolean = location.pathname === "/about"; //첫페이지구분
+
   return (
-    <footer className="ft border-t-2 font-300 mt-[100px]">
+    <footer className={`ft border-t-2 font-300  ${ isAbout ? "" : "mt-[clamp(20px,5vw,100px)]" } `}>
        <div className="max-w-1550 px-5 gap-[60px] w-full mx-auto py-[50px] flex justify-between">
         <div className="logo hidden xl:block">
             <img src="/logo.svg" className="w-[150px]"></img>
