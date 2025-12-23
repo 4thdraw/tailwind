@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 
 export default function Ft() {
 
-  const [ plusarrow, setPlusarrow] = useState<boolean>(true);
+  const [ plusarrow, setPlusarrow ] = useState<boolean>(true);
+  const [ helpopen, setHelpopen ] = useState<boolean>(true);
+  const [ comopen, setComopen ] = useState<boolean>(true); 
 
   return (
     <footer className="ft border-t-2 font-300 mt-[100px]">
@@ -14,9 +16,11 @@ export default function Ft() {
         </div>
         <div className="flex-1  grid  grid-cols-12  font-kr leading-[1.8]">
             <div className="lg:col-span-4  md:col-span-6  col-span-12  companyinfo xl:order-first order-last">
-                <h3 className="font-700 text-subtitle mb-3 flex justify-between border-b-2 md:border-none">주식회사 포랩코리아 
-                  <button className="md:hidden">+</button></h3>
-                <div className="hidden md:block">
+                <h3 onClick={ ()=>{setComopen(!comopen)} } className="font-700 text-subtitle mb-3 flex justify-between border-b-2 md:border-none">주식회사 포랩코리아 
+                <button className="md:hidden"  >
+                  { comopen ? "+" : "-" }  
+                </button></h3>
+                <div className={` ${ comopen ? "hidden" : "" }  md:block`}>
                   <span className="font-500">대표 : </span> 강동균<br />
                   <span className="font-500">사업자등록번호 : </span> 578-81-03310 <a href="">[사업자정보확인]</a><br />                
                   <span className="font-500">통신판매업신고번호 : </span> 2024-서울마포-0658 호<br />
@@ -56,10 +60,12 @@ export default function Ft() {
                 </div>
               </div>
               <div className="flex-1 font-en flex flex-col  helpcontent flex-1 mt-10  lg:mt-0">
-                <h3 className="font-700 text-subtitle mb-3 flex justify-between border-b-2 md:border-none">HELP  
-                  <button className="md:hidden">+</button> 
+                <h3  onClick={()=>{ setHelpopen(!helpopen) }} className="font-700 text-subtitle mb-3 flex justify-between border-b-2 md:border-none">HELP  
+                  <button className="md:hidden">
+                    { helpopen ? "+" : "-" }
+                  </button> 
                 </h3>
-                <div className="hidden md:block">
+                <div className={` ${ helpopen ? "hidden" : "" } md:block  mb-4  md:mb-0 `}>
                   <ul>
                     <li>
                       <Link to="/store">매장 안내</Link>
