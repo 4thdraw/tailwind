@@ -14,6 +14,7 @@ export interface MainProduct {
 }
 
 export interface ProductItem {
+  productid : number
   브랜드?: string
   상품명: string
   판매가: number

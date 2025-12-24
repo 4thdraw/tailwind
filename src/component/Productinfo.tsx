@@ -1,4 +1,6 @@
 import type { ProductItem } from '../types/banner';
+import { Link } from 'react-router-dom';
+
 
 interface ProductItemProps {
   v: ProductItem;
@@ -9,7 +11,7 @@ export default function Productinfo({ v }: ProductItemProps ) {
   const discountRate = Math.round((1 - v.판매가 / v.정가) * 100);
 
   return (
-    <div className='grid  grid-cols-[repeat(15,minmax(0,1fr))] md:flex md:flex-col'>
+    <Link to={`/product/${v.productid}`} className='grid  grid-cols-[repeat(15,minmax(0,1fr))] md:flex md:flex-col'>
         <img src={v.이미지} className='rounded-[20px] 
                col-span-4   sm:col-span-3    md:w-full  object-cover'></img>
         <div className='flex flex-col gap-[12px] mt-[12px] font-kr 
@@ -22,6 +24,6 @@ export default function Productinfo({ v }: ProductItemProps ) {
            { v.판매가 !== v.정가 && <span className='text-gray font-en'>{v.정가.toLocaleString()}원</span> }
             </p>
         </div>
-    </div>
+    </Link>
   )
 }

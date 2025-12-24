@@ -4,6 +4,7 @@ import Home from './Home';
 import About from './About';
 import Board from './Board';
 import Product from './Product';
+import Detail from './Detail';
 
 export default function Content() {
   return (
@@ -13,6 +14,7 @@ export default function Content() {
             <Route path="/about" element={<About />} />
             <Route path="/product" element={<Product />} />
             <Route path="/board" element={<Board />} />
+            <Route path="/product/:no" element={<Detail />} />
         </Routes>       
     </div>
   )

@@ -12,7 +12,7 @@ export default function Ft() {
   const isAbout : boolean = location.pathname === "/about"; //첫페이지구분
 
   return (
-    <footer className={`ft border-t-2 font-300  ${ isAbout ? "" : "mt-[clamp(20px,5vw,100px)]" } `}>
+    <footer className={`ft border-t-2 font-300  ${ isAbout ? "" : "mt-[clamp(40px,5vw,100px)]" } `}>
        <div className="max-w-1550 px-5 gap-[60px] w-full mx-auto py-[50px] flex justify-between">
         <div className="logo hidden xl:block">
             <img src="/logo.svg" className="w-[150px]"></img>
@@ -30,10 +30,10 @@ export default function Ft() {
                   <span className="font-500">주소 : </span> 04056 서울 마포구 신촌로4길 22-8 4층 (동교동)<br />                
                   <span className="font-500">개인정보관리책임자 : </span> 서인석
                 </div>
-                <ul className="flex leading-[0.8] mt-10 font-500">
-                  <li className="border-r-[1px]"><a href="" className="pe-2">회사소개</a></li>
-                  <li className="border-r-[1px]"><a href="" className="px-2">이용약관</a></li>
-                  <li className="border-r-[1px]"><a href="" className="px-2">개인정보정책</a></li>
+                <ul className="flex leading-[0.8] mt-10 font-500 text-[clamp(14px,2vw,16px)]">
+                  <li className="sm:border-r-[1px]"><a href="" className="pe-2 ">회사소개</a></li>
+                  <li className="sm:border-r-[1px]"><a href="" className="px-2">이용약관</a></li>
+                  <li className="sm:border-r-[1px]"><a href="" className="px-2">개인정보정책</a></li>
                   <li><a href="" className="px-2">이용안내</a></li>                  
                 </ul>
                 {/* 모바일때노출되는  sns */}

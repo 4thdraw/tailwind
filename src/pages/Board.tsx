@@ -43,12 +43,13 @@ export default function Board() {
 
 
   return (
-    <section>
+    <section className="px-3">
         <Title  bigtitle="커뮤니티" subtitle="열린 마음으로 고객의 소리를 담습니다." ></Title>
-        <ul className=" text-[36px] mx-auto w-[1024px] flex flex-col gap-4 mt-20 font-kr">
+        <ul className=" text-[clamp(18px,3vw,36px)] mx-auto w-full
+         max-w-[1024px] flex flex-col mt-[clamp(2.5rem,3.8vw,10rem)] font-kr border-t-2">
           {
             boardlist.map( (item, idx ) => <li className={  `${ action !== idx && "border-b-2"} ` } key={idx}>
-              <h3 className={`text-2xl ${ action === idx &&  "font-bold" } mb-2 
+              <h3 className={`text-[clamp(16px,3vw,24px)] ${ action === idx &&  "font-bold" } mb-2 
               flex justify-between items-center `} 
                onClick={ ()=>{ setAction(action === idx ? null : idx); } } > 
                
@@ -66,7 +67,7 @@ export default function Board() {
                
                </h3>
               {
-                action === idx && <p className="text-xl p-5 bg-gray-800">{item.content}</p>
+                action === idx && <p className="text-xl p-5 bg-[#f5f5f5] text-[clamp(13px,2.2vw,18px)] ">{item.content}</p>
               }              
             </li> )
           }
