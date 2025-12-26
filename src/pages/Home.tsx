@@ -25,6 +25,7 @@ const [isPop, setisPopshow ] = useState<boolean>(true);
     <div className="">
     { isPop && <Popup setIsPopShow={setisPopshow} ></Popup> }  
       <Swiper
+        className='mainSlide'
         spaceBetween={0}
         slidesPerView={1}
         modules={[Navigation, Pagination, Autoplay, EffectFade]}
