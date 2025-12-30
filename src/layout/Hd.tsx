@@ -2,7 +2,9 @@ import { useState, useEffect } from 'react'; //컨텐츠변경화면제어
 import { Link,  useLocation } from 'react-router-dom' //주소창관련모듈
 import { Swiper , SwiperSlide } from 'swiper/react'; //슬라이드
 import { Autoplay, EffectFade } from 'swiper/modules'; //슬라이드 옵션
-import {  Bars3Icon,   XMarkIcon } from "@heroicons/react/16/solid"; // ui모듈
+import { Bars3Icon,   XMarkIcon } from "@heroicons/react/16/solid"; // ui모듈
+
+import Logo from '../ui/Logo'; //로고
 
 
 import 'swiper/css'; //슬라이드 스타일
@@ -72,8 +74,9 @@ export default function Hd() {
                         </div>
                         <div className='flex justify-between align-center px-4 py-[35px]'>
                           <h1 className='flex flex-col items-center justify-center'>
-                              <a href="/" className='text-white font-en '>
-                                <img src="/logo.svg" className={`w-[180px]    ${ isRoot ?  scrolled  ?  ""  :  "filter  invert" : "" } ` }></img>
+                              <a href="/" className={`${ isRoot ? scrolled  ?  ""  : "text-white" : "text-dark" } font-en `}>
+                                {/* <img src="/logo.svg" className={`w-[180px]    ${ isRoot ?  scrolled  ?  ""  :  "filter  invert" : "" } ` }></img> */}
+                                 <Logo></Logo>
                               </a>
                           </h1>
                           <button className={`md:hidden w-[36px] ${  isRoot ? scrolled ? "" : "text-white" : "" }`}  onClick={ () => { setAllmenu(!allmenu) } } >

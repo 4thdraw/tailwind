@@ -1,22 +1,62 @@
 {
     "mainBanner" : [
         {
-            "imgurl" : "/banner/m_1.jpg",
-            "title" : "겨울 필수템 어그부츠 ~60% OFF",
-            "subtitle" : "A 컬러스 오브 캘리포니아"
+            "imgurl" : "https://thumb.cjonstyle.net/unsafe/720x0/image.cjonstyle.net/public/confirm/assets/module/MBNR05C/2025/12/24/c96e7b9e1f002f3cb070f486a903dca739e260d7.jpg",
+            "title" : "",
+            "subtitle" : ""
         },
          {
-            "imgurl" : "/banner/m_2.jpg",
+            "imgurl" : "https://thumb.cjonstyle.net/unsafe/720x0/image.cjonstyle.net/public/confirm/assets/module/MBNR05C/2025/12/29/6807a8f6a6ede1c978fcaf1604836364504a703b.jpg",
+            "title" : "",
+            "subtitle" : ""
+        },
+         {
+            "imgurl" : "https://thumb.cjonstyle.net/unsafe/720x0/image.cjonstyle.net/public/confirm/assets/module/MBNR05C/2025/12/26/f905164192dca4a26e0401efebed2501ddf2de8b.png",
+            "title" : "",
+            "subtitle" : ""
+        },
+         {
+            "imgurl" : "https://thumb.cjonstyle.net/unsafe/720x0/image.cjonstyle.net/public/confirm/assets/module/MBNR05C/2025/11/28/a39573577f9626087bc9115799f3db978d9e45d9.jpg",
+            "title" : "",
+            "subtitle" : ""
+        },
+         {
+            "imgurl" : "https://thumb.cjonstyle.net/unsafe/720x0/image.cjonstyle.net/public/confirm/assets/module/MBNR05C/2025/11/28/a39573577f9626087bc9115799f3db978d9e45d9.jpg",
+            "title" : "",
+            "subtitle" : ""
+        },
+         {
+            "imgurl" : "https://thumb.cjonstyle.net/unsafe/720x0/image.cjonstyle.net/public/confirm/assets/module/MBNR05C/2025/11/28/a39573577f9626087bc9115799f3db978d9e45d9.jpg",
+            "title" : "",
+            "subtitle" : ""
+        },
+         {
+            "imgurl" : "https://thumb.cjonstyle.net/unsafe/720x0/image.cjonstyle.net/public/confirm/assets/module/MBNR05C/2025/11/28/a39573577f9626087bc9115799f3db978d9e45d9.jpg",
+            "title" : "",
+            "subtitle" : ""
+        },
+         {
+            "imgurl" : "https://thumb.cjonstyle.net/unsafe/720x0/image.cjonstyle.net/public/confirm/assets/module/MBNR05C/2025/11/28/a39573577f9626087bc9115799f3db978d9e45d9.jpg",
+            "title" : "",
+            "subtitle" : ""
+        },
+         {
+            "imgurl" : "https://thumb.cjonstyle.net/unsafe/720x0/image.cjonstyle.net/public/confirm/assets/module/MBNR05C/2025/11/28/a39573577f9626087bc9115799f3db978d9e45d9.jpg",
+            "title" : "",
+            "subtitle" : ""
+        },
+         {
+            "imgurl" : "https://thumb.cjonstyle.net/unsafe/720x0/image.cjonstyle.net/public/confirm/assets/module/MBNR05C/2025/12/29/7e7fd357247716606e4122c408d0c8cfab3241d5.jpg",
             "title" : "WINTER MUST HAVES",
             "subtitle" : "지금 꼭 필요한 윈터 큐레이션 아이템을 만나보세요."
         },
          {
-            "imgurl" : "/banner/m_3.jpg",
+            "imgurl" : "https://thumb.cjonstyle.net/unsafe/720x0/image.cjonstyle.net/public/confirm/assets/module/MBNR05C/2025/12/26/7cc240ce507323a7b1259f64d60e0b18bd1baba6.jpg",
             "title" : "겨울 필수템 어그부츠 ~60% OFF",
             "subtitle" : "A 컬러스 오브 캘리포니아"
         },
          {
-            "imgurl" : "/banner/m_4.jpg",
+            "imgurl" : "https://thumb.cjonstyle.net/unsafe/720x0/image.cjonstyle.net/public/confirm/assets/module/MBNR05C/2025/12/24/c96e7b9e1f002f3cb070f486a903dca739e260d7.jpg",
             "title" : "겨울 필수템 어그부츠 ~60% OFF",
             "subtitle" : "A 컬러스 오브 캘리포니아"
         }
